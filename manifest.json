@@ -4,20 +4,16 @@
     "manifest_version": 2,
     "description": "Extention to correct grammar of sentence",
     "browser_action": {
-        "default_popup": "popup.html",
+        "default_popup": "templates/index.html",
         "default_icon": {
-            "128": "",
-            "64": "",
-        },
-    },
-    "icons": {
-        "128": "",
-        "64": "",
+            "128": "logo.png"
+        }
     },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["content.js"]
+            "js": ["static/js/script.js"],
+            "css": ["static/css/style.css"]
         }
     ],
     "permissions": ["activeTab"]
